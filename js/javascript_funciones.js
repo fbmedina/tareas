@@ -285,15 +285,22 @@ function piramide_centrada() {
 	var size = Math.floor(prompt("Ingrese un número impar para el tamaño de la base de la pirámide"));
 	var piramide = "";
 
-	for (var i = 1; i <= size; i += 1){
-		piramide += "\n"; 
-  		for (var j = 1; j <= i; j += 1) {
-    		piramide += "*";
-    		for (var k = 1; k <= Math.floor(size / 2) - j; k += 1){
-    			piramide += " ";
-    		}
-    	}
+	if (size % 2 === 0){
+		size -= 1;
+	}
+
+	for (var i = 1; i <= size; i += 2){
+		piramide += "\n";
+		for (var j = i; j <= Math.floor(size / 2); j += 1){
+			piramide += "-";
+	    }
+	    for (var k = 1; k <= i; k += 1){
+				piramide += "*";
+		}
+		for (var l = i; l <= Math.floor(size / 2); l += 1){
+			piramide += "-";
+	    }
   	}
 
-  	console.log(piramide);
+  	console.log(size + " " + piramide);
 }
