@@ -229,8 +229,9 @@ function n_positivos_pares_for() {
 		if (i % 2 === 0){
 			suma += i;
 		}
-		console.log(suma);
 	}
+
+	console.log(suma);
 }
 
 function secuencia_0_1() {
@@ -252,14 +253,47 @@ function secuencia_0_1() {
 	console.log(secuencia);
 }
 
+function cuadrado() {
+	var size = Math.floor(prompt("Ingrese el tamaño del lado del cuadrado"));
+	var cuadrado = "";
+
+	for (var i = 1; i <= size; i += 1){
+		cuadrado += '\n'; 
+  		for (var j = 1; j <= size; j += 1) {
+    		cuadrado += "*";
+    	}
+  	}
+
+ 	console.log(cuadrado);
+}
+
 function piramide() {
 	var size = Math.floor(prompt("Ingrese el tamaño de la base de la pirámide"));
 	var piramide = "";
 
-	for (var i = 0; i < size; i += 1){
-		for (var j = 0; j <= i; j += 1){
-			piramide += "*";
-		}
-		console.log(piramide);
-	}
+	for (var i = 1; i <= size; i += 1){
+		piramide += "\n"; 
+  		for (var j = 1; j <= i; j += 1) {
+    		piramide += "*";
+    	}
+  	}
+
+  	console.log(piramide);
+}
+
+function piramide_centrada() {
+	var size = Math.floor(prompt("Ingrese un número impar para el tamaño de la base de la pirámide"));
+	var piramide = "";
+
+	for (var i = 1; i <= size; i += 1){
+		piramide += "\n"; 
+  		for (var j = 1; j <= i; j += 1) {
+    		piramide += "*";
+    		for (var k = 1; k <= Math.floor(size / 2) - j; k += 1){
+    			piramide += " ";
+    		}
+    	}
+  	}
+
+  	console.log(piramide);
 }
