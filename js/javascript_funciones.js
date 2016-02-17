@@ -287,12 +287,12 @@ function piramide_centrada() {
 	var size = Math.floor(prompt("Ingrese el tamaño de la base de la pirámide"));
 	var piramide = "";
 
-	for (var i = 0; i < size; i += 1){
+	for (var i = 0; i < size; i += 2){
 		for (var j = i + 1; j < size; j += 1){
 			piramide += " ";
 		}
 
-		for (j = 0; j < 2 * i + 1; j += 1){
+		for (j = 0; j < i + 1; j += 1){
 			piramide += "*";
 		}
 
