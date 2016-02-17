@@ -291,8 +291,8 @@ function piramide_centrada() {
 
 	for (var i = 1; i <= size; i += 2){
 		piramide += "\n";
-	    for (var k = 1; k <= size; k += 1){
-			if (k <= i){
+	    for (var j = 1; j <= size; j += 1){
+			if (j <= i){
 				piramide += "*";
 			} else {
 				piramide += "-";
