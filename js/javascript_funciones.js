@@ -258,10 +258,11 @@ function cuadrado() {
 	var cuadrado = "";
 
 	for (var i = 1; i <= size; i += 1){
-		cuadrado += '\n'; 
   		for (var j = 1; j <= size; j += 1) {
     		cuadrado += "*";
     	}
+
+    	cuadrado += '\n'; 
   	}
 
  	console.log(cuadrado);
@@ -272,10 +273,11 @@ function piramide() {
 	var piramide = "";
 
 	for (var i = 1; i <= size; i += 1){
-		piramide += "\n"; 
   		for (var j = 1; j <= i; j += 1) {
     		piramide += "*";
     	}
+
+    	piramide += "\n"; 
   	}
 
   	console.log(piramide);
@@ -285,19 +287,16 @@ function piramide_centrada() {
 	var size = Math.floor(prompt("Ingrese el tamaño de la base de la pirámide"));
 	var piramide = "";
 
-	if (size % 2 === 0){
-		size -= 1;
-	}
-
-	for (var i = 1; i <= size; i += 2){
-		piramide += "\n";
-	    for (var j = 1; j <= size; j += 1){
-			if (j <= i){
-				piramide += "*";
-			} else {
-				piramide += "-";
-			}
+	for (var i = 0; i < size; i += 1){
+		for (var j = i + 1; j < size; j += 1){
+			piramide += " ";
 		}
+
+		for (j = 0; j < 2 * i + 1; j += 1){
+			piramide += "*";
+		}
+
+		piramide += "\n";
   	}
 
   	console.log(piramide);
