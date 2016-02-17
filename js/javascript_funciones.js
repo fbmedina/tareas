@@ -302,7 +302,8 @@ function piramide_centrada() {
 	var piramide = "";
 
 	for (var i = 0; i < size; i += 2){
-		for (var j = i / 2; j < size; j += 1){
+
+		for (var j = i / 2; j < size / 2; j += 1){
 			piramide += " ";
 		}
 
