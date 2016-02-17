@@ -221,6 +221,20 @@ function n_positivos_pares_while() {
 
 }
 
+function n_positivos_pares_do_while() {
+	var n = Math.floor(prompt("Ingrese un número"));
+	var suma = 0;
+	var i = 2;
+
+	do {
+		suma += i;
+		i += 2;
+	} while (i <= n);
+
+	console.log(suma);
+
+}
+
 function n_positivos_pares_for() {
 	var n = Math.floor(prompt("Ingrese un número"));
 	var suma = 0;
