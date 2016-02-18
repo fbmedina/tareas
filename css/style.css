@@ -1,0 +1,134 @@
+html, body {
+	height: 100%;
+	max-height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	background: hsla(60, 30%, 97.5%, 1);
+	color: hsla(240, 20%, 20%, 1);
+	font-family: "Roboto", sans-serif;
+	font-size: 1vw;
+	font-weight: 100;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a {
+	color: hsla(35, 90%, 70%, 1);
+	text-decoration: none;
+		-webkit-transition: all .25s ease;
+		-moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		-o-transition: all .25s ease;
+		transition: all .25s ease;
+}
+
+a:hover {
+	color: hsla(35, 90%, 55%, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+.row:after {content: ''; display: block; clear: both;}
+
+[class*="col-"] {float:left; padding:1em;}
+
+.col-1{width: 8.333333333333334%;}
+.col-2{width: 16.666666666666668%;}
+.col-3{width: 25.0%;}
+.col-4{width: 33.333333333333336%;}
+.col-5{width: 41.66666666666667%;}
+.col-6{width: 50.0%;}
+.col-7{width: 58.333333333333336%;}
+.col-8{width: 66.66666666666667%;}
+.col-9{width: 75.0%;}
+.col-10{width: 83.33333333333334%;}
+.col-11{width: 91.66666666666667%;}
+.col-12{width: 100.0%;}
+
+.col-offset-1{margin-left: 8.333333333333334%;}
+.col-offset-2{margin-left: 16.666666666666668%;}
+.col-offset-3{margin-left: 25.0%;}
+.col-offset-4{margin-left: 33.333333333333336%;}
+.col-offset-5{margin-left: 41.66666666666667%;}
+.col-offset-6{margin-left: 50.0%;}
+.col-offset-7{margin-left: 58.333333333333336%;}
+.col-offset-8{margin-left: 66.66666666666667%;}
+.col-offset-9{margin-left: 75.0%;}
+.col-offset-10{margin-left: 83.33333333333334%;}
+.col-offset-11{margin-left: 91.66666666666667%;}
+.col-offset-12{margin-left: 100.0%;}
+
+nav {
+	height: 100%;
+	background: hsla(35, 90%, 70%, 1);
+	color: hsla(0, 0%, 100%, 1);
+	font-weight: 400;
+}
+
+nav a {
+	color: hsla(0, 0%, 100%, 1);
+	padding: 0.25em 1em;
+		-webkit-transition: all .25s ease;
+		-moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		-o-transition: all .25s ease;
+		transition: all .25s ease;
+}
+
+nav a:hover {
+	background: hsla(35, 90%, 55%, 1);
+	color: hsla(0, 0%, 100%, 1);
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 1em 0;
+}
+
+nav ul li:hover ul {
+	visibility: visible;
+	opacity: 1;
+}
+
+nav ul li ul{
+	padding: 0;
+	margin: 0 1em;
+	visibility: hidden;
+	opacity: 0;
+	border-left: solid 0.15em hsla(0, 0%, 100%, 1);
+		-webkit-transition: all 2s ease;
+		-moz-transition: all 2s ease;
+		-ms-transition: all 2s ease;
+		-o-transition: all 2s ease;
+		transition: all 2s ease;
+}
+
+a.btn {
+	font-size: 1.25em;
+	font-weight: 400;
+	color: hsla(0, 0%, 100%, 1);
+	padding: 0.25em 1em;
+	background: hsla(35, 90%, 70%, 1);
+	border-radius: 0.75em;
+	box-shadow: 0 0.25em 0 hsla(35, 90%, 55%, 1);
+	position: relative;
+		-webkit-transition: all .25s ease;
+		-moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		-o-transition: all .25s ease;
+		transition: all .25s ease;
+}
+
+a.btn:active {
+	top: 0.25em;
+	box-shadow: none;
+}

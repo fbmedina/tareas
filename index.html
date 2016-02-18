@@ -6,46 +6,61 @@
 	<meta name="description" content="Desafíos para las clases de Desafío Latam">
 	<meta name="author" content="Francisca Beatriz Medina Concha">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,400italic,100italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header>
-	<h1>Desafíos</h1>
-		<nav>
+	<div class="row">
+		<nav class="col-3">
 			<ul>
-				<li><a href="numero_mayor.html" target="_blank">Número mayor</a></li>
-				<li><a href="cachipun.html" target="_blank">Cachipún</a></li>
-				<li><a href="cajero.html" target="_blank">Cajero</a></li>
-				<li>Contraseña
+				<li><a href="#home" target="_blank"><i class="fa fa-home"></i></a></li>
+				<li><a href="#numero_mayor" target="_blank">Número mayor</a></li>
+				<li><a href="#cachipun" target="_blank">Cachipún</a></li>
+				<li><a href="#cajero" target="_blank">Cajero</a></li>
+				<li><a href="#">Contraseña:</a>
 					<ul>
-						<li><a href="password_while.html" target="_blank">While</a></li>
-						<li><a href="password_do_while.html" target="_blank">Do while</a></li>
+						<li><a href="#password_while" target="_blank">While</a></li>
+						<li><a href="#password_do_while" target="_blank">Do while</a></li>
 					</ul>
 				</li>
-				<li>Suma de n números positivos:
+				<li><a href="#n_positivos">Suma de n números positivos:</a>
 					<ul>
-						<li><a href="n_positivos_while.html" target="_blank">While</a></li>
-						<li><a href="n_positivos_do_while.html" target="_blank">Do while</a></li>
+						<li><a href="#n_positivos_while" target="_blank">While</a></li>
+						<li><a href="#n_positivos_do_while" target="_blank">Do while</a></li>
 					</ul>
 				</li>
-				<li>Suma de n números positivos pares:
+				<li><a href="#n_positivos_pares">Suma de n números positivos pares:</a>
 					<ul>
-						<li><a href="n_positivos_pares_while.html" target="_blank">While</a></li>
-						<li><a href="n_positivos_pares_do_while.html" target="_blank">Do while</a></li>
-						<li><a href="n_positivos_pares_for.html" target="_blank">For</a></li>
+						<li><a href="#n_positivos_pares_while" target="_blank">While</a></li>
+						<li><a href="#n_positivos_pares_do_while" target="_blank">Do while</a></li>
+						<li><a href="#n_positivos_pares_for" target="_blank">For</a></li>
 					</ul>
 				</li>
-				<li><a href="secuencia_0_1.html" target="_blank">Secuencia de 0 y 1 tamaño N</a></li>
-				<li>Pirámide:
+				<li><a href="#secuencia_0_1" target="_blank">Secuencia de 0 y 1 tamaño N</a></li>
+				<li><a href="#piramide">Pirámide:</a>
 					<ul>
-						<li><a href="piramide.html" target="_blank">Pirámide primera</a></li>
-						<li><a href="piramide_centrada.html" target="_blank">Pirámide centrada</a></li>
+						<li><a href="#piramide_primera" target="_blank">Pirámide primera</a></li>
+						<li><a href="#piramide_centrada" target="_blank">Pirámide centrada</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>
-	</header>
+		<div class="col-9">
+			<header id="home">
+			<h1>Listado de Desafíos JavaScript</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sapiente, voluptas possimus delectus eum cumque maxime ratione, nulla atque esse mollitia culpa vero. Tempora laborum nostrum voluptatibus repellendus porro! Impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sit perspiciatis nisi harum ipsa quidem sed eius inventore adipisci, necessitatibus quibusdam consectetur quae deserunt iusto velit a! Voluptatibus, voluptatum, facere.</p>
+			</header>
+			<main>
+				<section id="numero_mayor">
+					<h2>Número mayor de 3 números</h2>
+					<a href="#" onclick="numero_mayor();" class="btn">Iniciar Función</a>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<script src="js/javascript_funciones.js"></script>
 </body>
 </html>
