@@ -32,6 +32,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
 
+.small {
+	font-size: 0.75em;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+
+.bold {
+	font-weight: 400;
+}
+
 .row:after {content: ''; display: block; clear: both;}
 
 [class*="col-"] {float:left; padding:1em;}
@@ -95,9 +107,9 @@ nav ul li {
 }
 
 nav ul li ul{
+	font-size: 0.95em;
 	margin: 0 1em;
 	padding: 0;
-	
 }
 
 a.btn {

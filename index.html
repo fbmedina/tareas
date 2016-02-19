@@ -16,35 +16,20 @@
 		<nav class="col-3">
 			<ul>
 				<li><a href="#home" target="_blank"><i class="fa fa-home"></i></a></li>
-				<li><a href="#numero_mayor" target="_blank">Número mayor</a></li>
+				<li><a href="#n_mayor" target="_blank">Número mayor</a></li>
 				<li><a href="#cachipun" target="_blank">Cachipún</a></li>
 				<li><a href="#cajero" target="_blank">Cajero</a></li>
-				<li><a href="#">Contraseña:</a>
-					<ul>
-						<li><a href="#password_while" target="_blank">While</a></li>
-						<li><a href="#password_do_while" target="_blank">Do while</a></li>
-					</ul>
-				</li>
-				<li><a href="#n_positivos">Suma de n números positivos:</a>
-					<ul>
-						<li><a href="#n_positivos_while" target="_blank">While</a></li>
-						<li><a href="#n_positivos_do_while" target="_blank">Do while</a></li>
-					</ul>
-				</li>
-				<li><a href="#n_positivos_pares">Suma de n números positivos pares:</a>
-					<ul>
-						<li><a href="#n_positivos_pares_while" target="_blank">While</a></li>
-						<li><a href="#n_positivos_pares_do_while" target="_blank">Do while</a></li>
-						<li><a href="#n_positivos_pares_for" target="_blank">For</a></li>
-					</ul>
-				</li>
-				<li><a href="#secuencia_0_1" target="_blank">Secuencia de 0 y 1 tamaño N</a></li>
-				<li><a href="#piramide">Pirámide:</a>
-					<ul>
-						<li><a href="#piramide_primera" target="_blank">Pirámide primera</a></li>
-						<li><a href="#piramide_centrada" target="_blank">Pirámide centrada</a></li>
-					</ul>
-				</li>
+				<li><a href="#password">Contraseña</a></li>
+				<li><a href="#n_positivos">Suma de n números positivos</a></li>
+				<li><a href="#n_positivos_pares">Suma de n números positivos pares</a></li>
+				<li><a href="#secuencia_0_1" target="_blank">Secuencia de 0 y 1 tamaño n</a></li>
+				<li><a href="#cuadrado" target="_blank">Número al revés</a></li>
+				<li><a href="#piramide">Pirámide</a></li>
+				<li><a href="#adivina_el_n">Adivina el número</a></li>
+				<li><a href="#n_al_reves" target="_blank">Número al revés</a></li>
+				<li><a href="#n_al_derecho_reves" target="_blank">Número al derecho igual que al revés</a></li>
+				<li><a href="#n_primo" target="_blank">Número primo</a></li>
+				<li><a href="#n_primos" target="_blank">Números primo</a></li>
 			</ul>
 		</nav>
 		<div class="col-9">
@@ -53,9 +38,114 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sapiente, voluptas possimus delectus eum cumque maxime ratione, nulla atque esse mollitia culpa vero. Tempora laborum nostrum voluptatibus repellendus porro! Impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sit perspiciatis nisi harum ipsa quidem sed eius inventore adipisci, necessitatibus quibusdam consectetur quae deserunt iusto velit a! Voluptatibus, voluptatum, facere.</p>
 			</header>
 			<main>
-				<section id="numero_mayor">
+				<section id="n_mayor">
 					<h2>Número mayor de 3 números</h2>
-					<a href="#" onclick="numero_mayor();" class="btn">Iniciar Función</a>
+					<p>El usuario ingresa tres números enteros y la consola devuelve el número mayor.</p>
+					<a onclick="n_mayor();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="cachipun">
+					<h2>Cachipún (piedra papel o tijera)</h2>
+					<p>El usuario ingresa piedra, papel o tijera, la máquina aleatoriamente escoge piedra, papel o tijera, la consola devuelve el ganador.</p>
+					<a onclick="cachipun();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="cajero">
+					<h2>Cajero Automático</h2>
+					<p>El usuario ingresa un monto y la consola devuelve ese dinero descompuesto en billetes y monedas.</p>
+					<a onclick="cajero();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="password">
+					<h2>Adivinar contraseña</h2>
+					<p>Se le pide al usuario que ingrese una contraseña hasta dar con la contraseña correcta.</p>
+					<div class="row">
+						<section class="col-6">
+							<h3>Con do while:</h3>
+							<a onclick="password_do_while();" class="btn">Iniciar Función</a>
+						</section>
+						<section class="col-6">
+							<h3>Con while:</h3>
+							<a onclick="password_while();" class="btn">Iniciar Función</a>
+						</section>
+					</div>
+				</section>
+				<section id="n_positivos">
+					<h2>Suma de n números positivos</h2>
+					<p>Se le pide al usuario que ingrese una número y la consola devuelve la suma entre todos los números que lo anteceden.</p>
+					<p class="small bold"><span class="small-caps">ejemplo</span> 1 + 2 + 3 + ... + n</p>
+					<div class="row">
+						<section class="col-6">
+							<h3>Con do while:</h3>
+							<a onclick="n_positivos_do_while();" class="btn">Iniciar Función</a>
+						</section>
+						<section class="col-6">
+							<h3>Con while:</h3>
+							<a onclick="n_positivos_while();" class="btn">Iniciar Función</a>
+						</section>
+					</div>
+				</section>
+				<section id="n_positivos_pares">
+					<h2>Suma de n números positivos pares</h2>
+					<p>Se le pide al usuario que ingrese una número y la consola devuelve la suma entre todos los números pares que lo anteceden.</p>
+					<p class="small bold"><span class="small-caps">ejemplo</span> 2 + 4 + 6 +... + n</p>
+					<div class="row">
+						<section class="col-6">
+							<h3>Con while:</h3>
+							<a onclick="n_positivos_pares_while();" class="btn">Iniciar Función</a>
+						</section>
+						<section class="col-6">
+							<h3>Con for:</h3>
+							<a onclick="n_positivos_pares_for();" class="btn">Iniciar Función</a>
+						</section>
+					</div>
+				</section>
+				<section id="secuencia_0_1">
+					<h2>Secuencia de 0 y 1 de tamaño n</h2>
+					<p>El usuario ingresa un número y la consola devuelve un algoritmo con secuencia de 0 y 1 del tamaño del número ingresado con un 2 como último número.</p>
+					<a onclick="secuencia_0_1();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="cuadrado">
+					<h2>Cuadrado de asteriscos</h2>
+					<p>El usuario ingresa un número y la consola devuelve un cuadrado de asteriscos (*) con el lado del valor del número ingresado.</p>
+					<a onclick="cuadrado();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="piramide">
+					<h2>Pirámide de asteriscos</h2>
+					<p>El usuario ingresa un número y la consola devuelve una pirámide de asteriscos (*) con la base del valor del número ingresado.</p>
+					<div class="row">
+						<section class="col-6">
+							<h3>No centrada:</h3>
+							<a onclick="piramide();" class="btn">Iniciar Función</a>
+						</section>
+						<section class="col-6">
+							<h3>Centrada:</h3>
+							<a onclick="piramide_centrada();" class="btn">Iniciar Función</a>
+						</section>
+					</div>
+				</section>
+				<section id="adivina_el_n">
+					<h2>Adivina el número</h2>
+					<p>El usuario debe adivinar un número random asignado por la máquina, mientras la consola le devuelve si está por sobre éste o bajo éste.</p>
+					<a onclick="adivina_el_n();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="n_al_reves">
+					<h2>Número al revés</h2>
+					<p>El usuario ingresa un número y la consola lo devuelve al revés.</p>
+					<p class="small bold"><span class="small-caps">ejemplo</span> Se tiene el número 1298, se muestra: 8, 9, 2, 1</p>
+					<a onclick="n_al_reves();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="n_al_derecho_reves">
+					<h2>Número al derecho igual que al revés</h2>
+					<p>El usuario ingresa un número y la consola determina si es igual al derecho y al revés.</p>
+					<a onclick="n_al_derecho_reves();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="n_primo">
+					<h2>Número primo</h2>
+					<p>El usuario ingresa un número y la consola devuelve si es primo o no.</p>
+					<a onclick="n_primo();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="n_primos">
+					<h2>Números primo</h2>
+					<p>El usuario ingresa un número y la consola devuelve todos los números primos que lo anteceden.</p>
+					<a onclick="n_primos();" class="btn">Iniciar Función</a>
 				</section>
 			</main>
 		</div>

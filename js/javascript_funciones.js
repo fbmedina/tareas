@@ -1,25 +1,22 @@
-function numero_mayor() {
-	var numero1 = parseInt(prompt("Primer número"));
-	var numero2 = parseInt(prompt("Segundo número"));
-	var numero3 = parseInt(prompt("Tercer número"));
+function n_mayor() {
+	var n1 = parseInt(prompt("Primer número"));
+	var n2 = parseInt(prompt("Segundo número"));
+	var n3 = parseInt(prompt("Tercer número"));
 
-
-	if ((numero1 == numero2) && (numero2 == numero3)){ 
-		console.log("Los tres números son iguales");
-	}
-
-	if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)){
+	if (isNaN(n1) || isNaN(n2) || isNaN(n3)){
 		console.log("No escribiste números ¡Idiota!");
 	}
 
-	if ((numero1 >= numero2) && (numero1 >= numero3)){
-		console.log(numero1 + " es el número mayor");
+	if ((n1 == n2) && (n2 == n3)){ 
+		console.log("Los tres números son iguales");
+	}
 
-	} else if ((numero1 <= numero2) && (numero2 >= numero3)){
-		console.log(numero2 + " es el número mayor");
-
-	} else if ((numero1 >= numero2) && (numero1 <= numero3)){
-		console.log(numero3 + " es el número mayor");
+	if ((n1 >= n2) && (n1 >= n3)){
+		console.log(n1 + " es el número mayor");
+	} else if ((n1 <= n2) && (n2 >= n3)){
+		console.log(n2 + " es el número mayor");
+	} else if ((n1 >= n2) && (n1 <= n3)){
+		console.log(n3 + " es el número mayor");
 	}
 }
 
@@ -165,7 +162,7 @@ function password_while() {
 		user_tried = prompt("Adivine la contraseña");
 	}
 	
-	aconsole.log("¡Contraseña correcta!");
+	console.log("¡Contraseña correcta!");
 }
 
 function password_do_while() {
@@ -189,7 +186,7 @@ function n_positivos_while() {
 		i += 1;
 	}
 
-	console.log(suma);
+	console.log("La suma es: " + suma);
 }
 
 function n_positivos_do_while() {
@@ -202,7 +199,7 @@ function n_positivos_do_while() {
 		i += 1;
 	} while (i <= n);
 
-	console.log(suma);
+	console.log("La suma es: " + suma);
 }
 
 function n_positivos_pares_while() {
@@ -217,21 +214,7 @@ function n_positivos_pares_while() {
 		i += 1;
 	}
 
-	console.log(suma);
-
-}
-
-function n_positivos_pares_do_while() {
-	var n = Math.floor(prompt("Ingrese un número"));
-	var suma = 0;
-	var i = 2;
-
-	do {
-		suma += i;
-		i += 2;
-	} while (i <= n);
-
-	console.log(suma);
+	console.log("La suma sólo de los números pares es: " + suma);
 
 }
 
@@ -245,7 +228,7 @@ function n_positivos_pares_for() {
 		}
 	}
 
-	console.log(suma);
+	console.log("La suma sólo de los números pares es: " + suma);
 }
 
 function secuencia_0_1() {
@@ -255,10 +238,8 @@ function secuencia_0_1() {
 	for(var i = 0; i <= n; i += 1) {
 		if (i === n){
 			secuencia += "2";
-		
 		} else if (i % 2 === 0){
 			secuencia += "0 ";
-		
 		} else if (i % 2 !== 0){
 			secuencia += "1 ";
 		}
@@ -315,4 +296,92 @@ function piramide_centrada() {
   	}
 
   	console.log(piramide);
+}
+
+function adivina_el_n() {
+	var limite = Math.floor(prompt("¿Ingrese el límite?"));
+	var azar = Math.ceil(Math.random()*limite);
+	var user = 0;
+	var count = 1;
+	var oportunities = Math.floor(prompt("¿Cuántas oportunidades quieres tener?"));
+
+	while (azar !== user) {
+		user = Math.floor(prompt("Adivina un número del 1 al " + limite));
+		if (azar === user) {
+			console.log("has ganado");
+			break;
+		} else if (count === oportunities) {
+			console.log("has perdido");
+			break;
+		} else if (user > azar) {
+			console.log("el número es más bajo")
+		} else if (user < azar) {
+			console.log("el número es más alto")
+		}
+		count += 1;
+	}
+}
+
+function n_al_reves() {
+	var n = prompt("Ingrese un número");
+	var resultado = "";
+
+	for (var i = n.length -1; i >= 0; i -= 1){
+		resultado += n[i];
+	}
+
+	console.log(resultado);
+}
+
+function n_al_derecho_reves() {
+	var n = prompt("Ingrese un número");
+	var resultado = "";
+
+	for (var i = n.length -1; i >= 0; i -= 1){
+		resultado += n[i];
+	}
+
+	if (resultado === n) {
+		console.log("El número al derecho y al revés es igual");
+	} else {
+		console.log("El número al derecho y al revés no es igual");
+	}
+}
+
+function n_primo() {
+	var n = Math.floor(prompt("Ingrese un número"));
+	
+	if ((n === 1) || (n === 2)){
+		console.log("Es primo");
+	} else {
+		for (var i = 2; i < n; i += 1){
+	        if (n % i === 0) {
+	            console.log("No es primo"); 
+	            break;
+	        } else{
+	            console.log("Es primo");
+	            break; 
+    		}
+		}
+	}
+}
+
+function n_primos() {
+	var n = Math.floor(prompt("Ingrese un número"));
+
+	for (var i = 1; i < 4; i += 1){
+		console.log(i);
+	}
+
+	for (i = 4; i <= n; i += 1){
+	    var primo = 0;
+	    for (var j = 2; j < i ; j += 1){
+			if (i % j === 0){
+				primo = 1;
+			}
+		}
+	    if (primo === 0) {
+	    	console.log(i);
+	    }
+	}
 }
