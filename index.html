@@ -15,24 +15,28 @@
 	<div class="row">
 		<nav class="col-3">
 			<ul>
-				<li><a href="#home" target="_blank"><i class="fa fa-home"></i></a></li>
-				<li><a href="#n_mayor" target="_blank">Número mayor</a></li>
-				<li><a href="#cachipun" target="_blank">Cachipún</a></li>
-				<li><a href="#cajero" target="_blank">Cajero</a></li>
+				<li><a href="#home"><i class="fa fa-home"></i></a></li>
+				<li><a href="#n_mayor">Número mayor</a></li>
+				<li><a href="#cachipun">Cachipún</a></li>
+				<li><a href="#cajero">Cajero</a></li>
 				<li><a href="#password">Contraseña</a></li>
 				<li><a href="#n_positivos">Suma de n números positivos</a></li>
 				<li><a href="#n_positivos_pares">Suma de n números positivos pares</a></li>
-				<li><a href="#secuencia_0_1" target="_blank">Secuencia de 0 y 1 tamaño n</a></li>
-				<li><a href="#cuadrado" target="_blank">Número al revés</a></li>
+				<li><a href="#secuencia_0_1">Secuencia de 0 y 1 tamaño n</a></li>
+				<li><a href="#cuadrado">Número al revés</a></li>
 				<li><a href="#piramide">Pirámide</a></li>
 				<li><a href="#adivina_el_n">Adivina el número</a></li>
-				<li><a href="#n_al_reves" target="_blank">Número al revés</a></li>
-				<li><a href="#n_al_derecho_reves" target="_blank">Número al derecho igual que al revés</a></li>
-				<li><a href="#n_primo" target="_blank">Número primo</a></li>
-				<li><a href="#n_primos" target="_blank">Números primo</a></li>
+				<li><a href="#n_al_reves">Número al revés</a></li>
+				<li><a href="#n_al_derecho_reves">Número al derecho igual que al revés</a></li>
+				<li><a href="#n_primo">Número primo</a></li>
+				<li><a href="#n_primos">Números primo</a></li>
+				<li><a href="#n_par_o_impar">Número par o impar</a></li>
+				<li><a href="#meses_pares">Meses pares</a></li>
+				<li><a href="#vocales">Vocales</a></li>
+				<li><a href="#companeros">Compañeros</a></li>
 			</ul>
 		</nav>
-		<div class="col-9">
+		<div class="col-9 col-offset-3">
 			<header id="home">
 			<h1>Listado de Desafíos JavaScript</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sapiente, voluptas possimus delectus eum cumque maxime ratione, nulla atque esse mollitia culpa vero. Tempora laborum nostrum voluptatibus repellendus porro! Impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sit perspiciatis nisi harum ipsa quidem sed eius inventore adipisci, necessitatibus quibusdam consectetur quae deserunt iusto velit a! Voluptatibus, voluptatum, facere.</p>
@@ -57,14 +61,14 @@
 					<h2>Adivinar contraseña</h2>
 					<p>Se le pide al usuario que ingrese una contraseña hasta dar con la contraseña correcta.</p>
 					<div class="row">
-						<section class="col-6">
+						<div class="col-6">
 							<h3>Con do while:</h3>
 							<a onclick="password_do_while();" class="btn">Iniciar Función</a>
-						</section>
-						<section class="col-6">
+						</div>
+						<div class="col-6">
 							<h3>Con while:</h3>
 							<a onclick="password_while();" class="btn">Iniciar Función</a>
-						</section>
+						</div>
 					</div>
 				</section>
 				<section id="n_positivos">
@@ -72,14 +76,14 @@
 					<p>Se le pide al usuario que ingrese una número y la consola devuelve la suma entre todos los números que lo anteceden.</p>
 					<p class="small bold"><span class="small-caps">ejemplo</span> 1 + 2 + 3 + ... + n</p>
 					<div class="row">
-						<section class="col-6">
+						<div class="col-6">
 							<h3>Con do while:</h3>
 							<a onclick="n_positivos_do_while();" class="btn">Iniciar Función</a>
-						</section>
-						<section class="col-6">
+						</div>
+						<div class="col-6">
 							<h3>Con while:</h3>
 							<a onclick="n_positivos_while();" class="btn">Iniciar Función</a>
-						</section>
+						</div>
 					</div>
 				</section>
 				<section id="n_positivos_pares">
@@ -87,14 +91,14 @@
 					<p>Se le pide al usuario que ingrese una número y la consola devuelve la suma entre todos los números pares que lo anteceden.</p>
 					<p class="small bold"><span class="small-caps">ejemplo</span> 2 + 4 + 6 +... + n</p>
 					<div class="row">
-						<section class="col-6">
+						<div class="col-6">
 							<h3>Con while:</h3>
 							<a onclick="n_positivos_pares_while();" class="btn">Iniciar Función</a>
-						</section>
-						<section class="col-6">
+						</div>
+						<div class="col-6">
 							<h3>Con for:</h3>
 							<a onclick="n_positivos_pares_for();" class="btn">Iniciar Función</a>
-						</section>
+						</div>
 					</div>
 				</section>
 				<section id="secuencia_0_1">
@@ -111,14 +115,14 @@
 					<h2>Pirámide de asteriscos</h2>
 					<p>El usuario ingresa un número y la consola devuelve una pirámide de asteriscos (*) con la base del valor del número ingresado.</p>
 					<div class="row">
-						<section class="col-6">
+						<div class="col-6">
 							<h3>No centrada:</h3>
 							<a onclick="piramide();" class="btn">Iniciar Función</a>
-						</section>
-						<section class="col-6">
+						</div>
+						<div class="col-6">
 							<h3>Centrada:</h3>
 							<a onclick="piramide_centrada();" class="btn">Iniciar Función</a>
-						</section>
+						</div>
 					</div>
 				</section>
 				<section id="adivina_el_n">
@@ -143,9 +147,29 @@
 					<a onclick="n_primo();" class="btn">Iniciar Función</a>
 				</section>
 				<section id="n_primos">
-					<h2>Números primo</h2>
+					<h2>Números primos</h2>
 					<p>El usuario ingresa un número y la consola devuelve todos los números primos que lo anteceden.</p>
 					<a onclick="n_primos();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="n_par_o_impar">
+					<h2>Número par o impar</h2>
+					<p>El usuario ingresa un número y la consola devuelve si es par o impar.</p>
+					<a onclick="n_par_o_impar();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="meses_pares">
+					<h2>Meses pares</h2>
+					<p>La consola devuelve sólo los meses del año pares.</p>
+					<a onclick="meses_pares();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="vocales">
+					<h2>Vocales</h2>
+					<p>El usuario ingresa una frase y la consola devuelve sólo las vocales de la frase.</p>
+					<a onclick="vocales();" class="btn">Iniciar Función</a>
+				</section>
+				<section id="companeros">
+					<h2>Compañeros</h2>
+					<p>Según la generación 3 de Desafío Latam la consola devuelve los nombres de las mujeres del curso más el total de la suma de sus edades, los nombres de los hombres del curso más el total de la suma de sus edades y la suma de todas las edades (hombres y mujeres).</p>
+					<a onclick="companeros();" class="btn">Iniciar Función</a>
 				</section>
 			</main>
 		</div>

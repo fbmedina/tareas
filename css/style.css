@@ -79,6 +79,7 @@ nav {
 	background: hsla(35, 90%, 70%, 1);
 	color: hsla(0, 0%, 100%, 1);
 	font-weight: 400;
+	position: fixed;
 }
 
 nav a {
@@ -131,4 +132,8 @@ a.btn {
 a.btn:active {
 	top: 0.25em;
 	box-shadow: none;
+}
+
+section {
+	margin-bottom: 10%;
 }

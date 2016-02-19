@@ -314,9 +314,9 @@ function adivina_el_n() {
 			console.log("has perdido");
 			break;
 		} else if (user > azar) {
-			console.log("el número es más bajo")
+			console.log("el número es más bajo");
 		} else if (user < azar) {
-			console.log("el número es más alto")
+			console.log("el número es más alto");
 		}
 		count += 1;
 	}
@@ -384,4 +384,100 @@ function n_primos() {
 	    	console.log(i);
 	    }
 	}
+}
+
+function n_par_o_impar(){
+	var n = Math.floor(prompt("Escoge un número"));
+	
+	if (n % 2 === 0) {
+		console.log("Es par");
+	} else if (n % 2 !== 0){
+		console.log("Es impar");
+	}
+}
+
+function meses_pares() {
+	var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octube", "noviembre", "diciembre"];
+	var meses_pares = [];
+
+	meses.forEach(function(elem, index) {
+		if ((index + 1) % 2 === 0 ) {
+			meses_pares.push(elem);
+		}
+	});
+
+	console.log(meses_pares);
+}
+
+function vocales() {
+	var frase = prompt("ingrese una frase");
+	var arreglo = frase.split("");
+	var solo_las_vocales = [];
+
+	arreglo.forEach(function (elem){
+		if (elem === "a" || elem === "e" || elem === "i" || elem === "o" || elem === "u") {
+			solo_las_vocales.push(elem);
+		}
+	});
+
+	console.log(solo_las_vocales);
+}
+
+function companeros() {
+	var companeritos = [
+	{ nombre: "Sebastián Meza Estrada", genero: "masculino", edad: 25 },
+	{ nombre: "Cristóbal Domínguez Henriquez", genero: "masculino", edad: 35 },
+	{ nombre: "Daniela Alejandra Mora", genero: "femenino", edad: 28 },
+	{ nombre: "Manuel Alejandro Saez Palominos", genero: "masculino", edad: 28 },
+	{ nombre: "Gonzalo Patricio Alarcón Iturra", genero: "masculino", edad: 28 },
+	{ nombre: "Rodrigo Ignacio Hein Yanez", genero: "masculino", edad: 29 },
+	{ nombre: "Francisca Beatriz Medina Concha", genero: "femenino", edad: 22 },
+	{ nombre: "María Alejandra Quintana Ramirez", genero: "femenino", edad: 28 },
+	{ nombre: "Nathalie Ravilet", genero: "femenino", edad: 28 },
+	{ nombre: "Joaquin Sepúlveda", genero: "masculino", edad: 24 },
+	{ nombre: "Carlos Patricio Salas Marín", genero: "masculino", edad: 27 },
+	{ nombre: "Diego Guajardo", genero: "masculino", edad: 28 },
+	{ nombre: "Benjamín Silva López", genero: "masculino", edad: 35 },
+	{ nombre: "Belén Guede Vicencio", genero: "femenino", edad: 18 },
+	{ nombre: "Juan Cristóbal Pazos", genero: "masculino", edad: 30 },
+	{ nombre: "David Wazowski", genero: "masculino", edad: 31 }
+	];
+
+	var arreglo_mujeres = companeritos
+		.filter(function(companero){
+			return companero.genero === "femenino";
+		}) .map(function(companero){
+			return " " + companero.nombre;
+		});
+
+	var total_edad_mujeres = companeritos
+		.filter(function(companero){
+			return companero.genero === "femenino";
+		}) .map(function(companero){
+			return companero.edad;
+		}) .reduce(function(anterior, actual){
+			return anterior+actual;
+		},0);
+
+	var arreglo_hombres = companeritos
+		.filter(function(companero){
+			return companero.genero === "masculino";
+		}).map(function(companero){
+			return " " + companero.nombre;
+		});
+
+	var total_edad_hombres = companeritos
+		.filter(function(companero){
+			return companero.genero === "masculino";
+		}) .map(function(companero){
+			return companero.edad;
+		}) .reduce(function(anterior, actual){
+			return anterior+actual;
+		},0);
+
+	var total_edad = total_edad_hombres + total_edad_mujeres;
+
+	console.log("Las mujeres del curso son: " + arreglo_mujeres + " y sumadas sus edades dan: " + total_edad_mujeres);
+	console.log("Los hombres del curso son: " + arreglo_hombres + " y sumadas sus edades dan: " + total_edad_hombres);
+	console.log("Sumadas las edades de todos dan: " + total_edad);
 }
