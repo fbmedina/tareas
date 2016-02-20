@@ -4,7 +4,7 @@ html, body {
 	width: 100%;
 	box-sizing: border-box;
 	background: hsla(60, 30%, 97.5%, 1);
-	color: hsla(240, 20%, 20%, 1);
+	color: hsla(240, 20%, 35%, 1);
 	font-family: "Roboto", sans-serif;
 	font-size: 1vw;
 	font-weight: 100;
@@ -42,6 +42,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .bold {
 	font-weight: 400;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
 }
 
 .row:after {content: ''; display: block; clear: both;}
@@ -114,6 +126,10 @@ nav ul li ul{
 }
 
 a.btn {
+	display: block;
+	margin: 1em auto;
+	text-align: center;
+	width: 10em;
 	font-size: 1.25em;
 	font-weight: 400;
 	color: hsla(0, 0%, 100%, 1);
@@ -136,4 +152,12 @@ a.btn:active {
 
 section {
 	margin-bottom: 10%;
+}
+
+div.consola {
+	width: 75%;
+	padding: 0 1em;
+	background: hsla(0, 0%, 100%, 1);
+	border: solid 0.1em hsla(240, 20%, 35%, 1);
+	margin: 0 auto;
 }

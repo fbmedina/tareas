@@ -1,22 +1,22 @@
-function n_mayor() {
+ function n_mayor() {
 	var n1 = parseInt(prompt("Primer número"));
 	var n2 = parseInt(prompt("Segundo número"));
 	var n3 = parseInt(prompt("Tercer número"));
 
 	if (isNaN(n1) || isNaN(n2) || isNaN(n3)){
-		console.log("No escribiste números ¡Idiota!");
+		document.getElementById("mostrar_n_mayor").innerHTML = "No escribiste números ¡Idiota!";
 	}
 
 	if ((n1 == n2) && (n2 == n3)){ 
-		console.log("Los tres números son iguales");
+		document.getElementById("mostrar_n_mayor").innerHTML = "Los tres números son iguales";
 	}
 
 	if ((n1 >= n2) && (n1 >= n3)){
-		console.log(n1 + " es el número mayor");
+		document.getElementById("mostrar_n_mayor").innerHTML = n1 + " es el número mayor";
 	} else if ((n1 <= n2) && (n2 >= n3)){
-		console.log(n2 + " es el número mayor");
+		document.getElementById("mostrar_n_mayor").innerHTML = n2 + " es el número mayor";
 	} else if ((n1 >= n2) && (n1 <= n3)){
-		console.log(n3 + " es el número mayor");
+		document.getElementById("mostrar_n_mayor").innerHTML = n3 + " es el número mayor";
 	}
 }
 
@@ -38,37 +38,37 @@ function cachipun() {
 
 	if ((user_choice === "piedra") || (user_choice === "papel") || (user_choice === "tijera")) {
 		if (user_choice === cpu_choice) {
-			console.log("Han empatado");
+			document.getElementById("mostrar_cachipun").innerHTML = "Han empatado";
 		}
 		else {
 			if ((user_choice === "piedra") && (cpu_choice === "tijera")) {
-				console.log("El computador escogió tijera ¡Has ganado!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió tijera ¡Has ganado!";
 			}
 
 			else if ((user_choice === "piedra") && (cpu_choice === "papel")) {
-				console.log("El computador escogió papel ¡Has perdido!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió papel ¡Has perdido!";
 			}
 
 			else if ((user_choice === "papel") && (cpu_choice === "piedra")) {
-				console.log("El computador escogió piedra ¡Has ganado!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió piedra ¡Has ganado!";
 			}
 
 			else if ((user_choice === "papel") && (cpu_choice === "tijera")) {
-				console.log("El computador escogió tijera ¡Has perdido!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió tijera ¡Has perdido!";
 			}
 
 			else if ((user_choice === "tijera") && (cpu_choice === "papel")) {
-				console.log("El computador escogió papel ¡Has ganado!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió papel ¡Has ganado!";
 			}
 
 			else if ((user_choice === "tijera") && (cpu_choice === "piedra")) {
-				console.log("El computador escogió piedra ¡Has perdido!");
+				document.getElementById("mostrar_cachipun").innerHTML = "El computador escogió piedra ¡Has perdido!";
 			}
 		}
 	}
 
 	else {
-		console.log("No escogiste un objeto válido");
+		document.getElementById("mostrar_cachipun").innerHTML = "No escogiste un objeto válido";
 	}
 }
 
@@ -110,47 +110,47 @@ function cajero() {
 	monto = monto%1;
 
 	if (billetes_20_mil >= 1) {
-		console.log("Billetes de $20.000: " + billetes_20_mil);
+		document.getElementById("mostrar_billetes_20_mil").innerHTML = "Billetes de $20.000: " + billetes_20_mil;
 	}
 
 	if (billetes_10_mil >= 1) {
-		console.log("Billetes de $10.000: " + billetes_10_mil);
+		document.getElementById("mostrar_billetes_10_mil").innerHTML = "Billetes de $10.000: " + billetes_10_mil;
 	}
 
 	if (billetes_5_mil >= 1) {
-		console.log("Billetes de $5.000: " + billetes_5_mil);
+		document.getElementById("mostrar_billetes_5_mil").innerHTML = "Billetes de $5.000: " + billetes_5_mil;
 	}
 
 	if (billetes_2_mil >= 1) {
-		console.log("Billetes de $2.000: " + billetes_2_mil);
+		document.getElementById("mostrar_billetes_2_mil").innerHTML = "Billetes de $2.000: " + billetes_2_mil;
 	}
 
 	if (billetes_mil >= 1) {
-		console.log("Billetes de $1.000: " + billetes_mil);
+		document.getElementById("mostrar_billetes_mil").innerHTML = "Billetes de $1.000: " + billetes_mil;
 	}
 
 	if (monedas_500 >= 1) {
-		console.log("Monedas de $500: " + monedas_500);
+		document.getElementById("mostrar_monedas_500").innerHTML = "Monedas de $500: " + monedas_500;
 	}
 
 	if (monedas_100 >= 1) {
-		console.log("Monedas de $100: " + monedas_100);
+		document.getElementById("mostrar_monedas_100").innerHTML = "Monedas de $100: " + monedas_100;
 	}
 
 	if (monedas_50 >= 1) {
-		console.log("Monedas de $50: " + monedas_50);
+		document.getElementById("mostrar_monedas_50").innerHTML = "Monedas de $50: " + monedas_50;
 	}
 
 	if (monedas_10 >= 1) {
-		console.log("Monedas de $10: " + monedas_10);
+		document.getElementById("mostrar_monedas_10").innerHTML = "Monedas de $10: " + monedas_10;
 	}
 
 	if (monedas_5 >= 1) {
-		console.log("Monedas de $5: " + monedas_5);
+		document.getElementById("mostrar_monedas_5").innerHTML = "Monedas de $5: " + monedas_5;
 	}
 
 	if (monedas_1 >= 1) {
-		console.log("Monedas de $1: " + monedas_1);
+		document.getElementById("mostrar_monedas_1").innerHTML = "Monedas de $1: " + monedas_1;
 	}
 }
 
@@ -162,7 +162,7 @@ function password_while() {
 		user_tried = prompt("Adivine la contraseña");
 	}
 	
-	console.log("¡Contraseña correcta!");
+	document.getElementById("mostrar_password_while").innerHTML = "¡Contraseña correcta!";
 }
 
 function password_do_while() {
@@ -173,7 +173,7 @@ function password_do_while() {
 		user_tried = prompt("Adivine la contraseña");
 	} while (user_tried !== password);
 	
-	console.log("¡Contraseña correcta!");
+	document.getElementById("mostrar_password_do_while").innerHTML = "¡Contraseña correcta!";
 }
 
 function n_positivos_while() {
@@ -186,7 +186,7 @@ function n_positivos_while() {
 		i += 1;
 	}
 
-	console.log("La suma es: " + suma);
+	document.getElementById("mostrar_n_positivos_while").innerHTML = "La suma es: " + suma;
 }
 
 function n_positivos_do_while() {
@@ -199,7 +199,7 @@ function n_positivos_do_while() {
 		i += 1;
 	} while (i <= n);
 
-	console.log("La suma es: " + suma);
+	document.getElementById("mostrar_n_positivos_do_while").innerHTML = "La suma es: " + suma;
 }
 
 function n_positivos_pares_while() {
@@ -214,7 +214,7 @@ function n_positivos_pares_while() {
 		i += 1;
 	}
 
-	console.log("La suma sólo de los números pares es: " + suma);
+	document.getElementById("mostrar_n_positivos_pares_while").innerHTML = "La suma sólo de los números pares es: " + suma;
 
 }
 
@@ -228,7 +228,7 @@ function n_positivos_pares_for() {
 		}
 	}
 
-	console.log("La suma sólo de los números pares es: " + suma);
+	document.getElementById("mostrar_n_positivos_pares_for").innerHTML = "La suma sólo de los números pares es: " + suma;
 }
 
 function secuencia_0_1() {
@@ -245,7 +245,7 @@ function secuencia_0_1() {
 		}
 	}
 
-	console.log(secuencia);
+	document.getElementById("mostrar_secuencia_0_1").innerHTML = secuencia;
 }
 
 function cuadrado() {
@@ -257,10 +257,10 @@ function cuadrado() {
     		cuadrado += "*";
     	}
 
-    	cuadrado += '\n'; 
+    	cuadrado += '<br>'; 
   	}
 
- 	console.log(cuadrado);
+ 	document.getElementById("mostrar_cuadrado").innerHTML = cuadrado;
 }
 
 function piramide() {
@@ -272,10 +272,10 @@ function piramide() {
     		piramide += "*";
     	}
 
-    	piramide += "\n"; 
+    	piramide += "<br>"; 
   	}
 
-  	console.log(piramide);
+  	document.getElementById("mostrar_piramide").innerHTML = piramide;
 }
 
 function piramide_centrada() {
@@ -285,17 +285,17 @@ function piramide_centrada() {
 	for (var i = 0; i < size; i += 2){
 
 		for (var j = i / 2; j < size / 2; j += 1){
-			piramide += " ";
+			piramide += "&nbsp;";
 		}
 
 		for (j = 0; j < i + 1; j += 1){
 			piramide += "*";
 		}
 
-		piramide += "\n";
+		piramide += "<br>";
   	}
 
-  	console.log(piramide);
+  	document.getElementById("mostrar_piramide_centrada").innerHTML = piramide;
 }
 
 function adivina_el_n() {
@@ -308,15 +308,15 @@ function adivina_el_n() {
 	while (azar !== user) {
 		user = Math.floor(prompt("Adivina un número del 1 al " + limite));
 		if (azar === user) {
-			console.log("has ganado");
+			document.getElementById("mostrar_adivina_el_n").innerHTML = "¡Has ganado!";
 			break;
 		} else if (count === oportunities) {
-			console.log("has perdido");
+			document.getElementById("mostrar_adivina_el_n").innerHTML = "¡Has perdido!";
 			break;
 		} else if (user > azar) {
-			console.log("el número es más bajo");
+			document.getElementById("mostrar_adivina_el_n").innerHTML = "El número es más bajo";
 		} else if (user < azar) {
-			console.log("el número es más alto");
+			document.getElementById("mostrar_adivina_el_n").innerHTML = "El número es más alto";
 		}
 		count += 1;
 	}
@@ -330,7 +330,7 @@ function n_al_reves() {
 		resultado += n[i];
 	}
 
-	console.log(resultado);
+	document.getElementById("mostrar_n_al_reves").innerHTML = resultado;
 }
 
 function n_al_derecho_reves() {
@@ -342,9 +342,9 @@ function n_al_derecho_reves() {
 	}
 
 	if (resultado === n) {
-		console.log("El número al derecho y al revés es igual");
+		document.getElementById("mostrar_n_al_derecho_reves").innerHTML = "El número al derecho y al revés es igual";
 	} else {
-		console.log("El número al derecho y al revés no es igual");
+		document.getElementById("mostrar_n_al_derecho_reves").innerHTML = "El número al derecho y al revés no es igual";
 	}
 }
 
@@ -352,47 +352,47 @@ function n_primo() {
 	var n = Math.floor(prompt("Ingrese un número"));
 	
 	if ((n === 1) || (n === 2)){
-		console.log("Es primo");
+		document.getElementById("mostrar_n_primo").innerHTML = "Es primo";
 	} else {
 		for (var i = 2; i < n; i += 1){
 	        if (n % i === 0) {
-	            console.log("No es primo"); 
+	            document.getElementById("mostrar_n_primo").innerHTML = "No es primo";
 	            break;
 	        } else{
-	            console.log("Es primo");
+	            document.getElementById("mostrar_n_primo").innerHTML = "Es primo";
 	            break; 
     		}
 		}
 	}
 }
 
-function n_primos() {
+/*function n_primos() {
 	var n = Math.floor(prompt("Ingrese un número"));
+	var primos = [];
 
 	for (var i = 1; i < 4; i += 1){
-		console.log(i);
+		document.getElementById("mostrar_n_primos").innerHTML = i;
 	}
 
 	for (i = 4; i <= n; i += 1){
-	    var primo = 0;
+	    primos.push(i);
 	    for (var j = 2; j < i ; j += 1){
-			if (i % j === 0){
-				primo = 1;
+			if (i % j !== 0){
+				primos.push(i);
 			}
 		}
-	    if (primo === 0) {
-	    	console.log(i);
-	    }
+
+		document.getElementById("mostrar_n_primos").innerHTML = primos;
 	}
-}
+}*/
 
 function n_par_o_impar(){
 	var n = Math.floor(prompt("Escoge un número"));
 	
 	if (n % 2 === 0) {
-		console.log("Es par");
+		document.getElementById("mostrar_n_par_o_impar").innerHTML = "Es par";
 	} else if (n % 2 !== 0){
-		console.log("Es impar");
+		document.getElementById("mostrar_n_par_o_impar").innerHTML = "Es impar";
 	}
 }
 
@@ -406,7 +406,7 @@ function meses_pares() {
 		}
 	});
 
-	console.log(meses_pares);
+	document.getElementById("mostrar_meses_pares").innerHTML = meses_pares;
 }
 
 function vocales() {
@@ -420,7 +420,7 @@ function vocales() {
 		}
 	});
 
-	console.log(solo_las_vocales);
+	document.getElementById("mostrar_vocales").innerHTML = solo_las_vocales;
 }
 
 function companeros() {
@@ -477,7 +477,7 @@ function companeros() {
 
 	var total_edad = total_edad_hombres + total_edad_mujeres;
 
-	console.log("Las mujeres del curso son: " + arreglo_mujeres + " y sumadas sus edades dan: " + total_edad_mujeres);
-	console.log("Los hombres del curso son: " + arreglo_hombres + " y sumadas sus edades dan: " + total_edad_hombres);
-	console.log("Sumadas las edades de todos dan: " + total_edad);
+	document.getElementById("mostrar_companeros_mujeres").innerHTML = "Las mujeres del curso son: " + arreglo_mujeres + " y sumadas sus edades dan: " + total_edad_mujeres;
+	document.getElementById("mostrar_companeros_hombres").innerHTML = "Los hombres del curso son: " + arreglo_hombres + " y sumadas sus edades dan: " + total_edad_hombres;
+	document.getElementById("mostrar_companeros_total").innerHTML = "Sumadas las edades de todos dan: " + total_edad;
 }
