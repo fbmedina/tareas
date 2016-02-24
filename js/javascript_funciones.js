@@ -493,20 +493,20 @@ function bebidas() {
 			if ((bebida.alcoholica === false) && (bebida.sorbos > 0) && (this.sorbos_totales < 30)){
 				bebida.sorbos -= 1;
 				this.sorbos_totales += 1;
-				return this.nombre + " de ha bebido una bebida no-alcoholica <br> A la bebida le quedan " + bebida.sorbos + " sorbos";
+				console.log(this.nombre + " de ha bebido una bebida no-alcoholica <br> A la bebida le quedan " + bebida.sorbos + " sorbos");
 			} else if ((bebida.alcoholica === true) && (this.edad >= 18) && (bebida.sorbos > 0) && (this.ebriedad < 25) && (this.sorbos_totales < 30)){
 				bebida.sorbos -= 1;
 				this.ebriedad += 1;
 				this.sorbos_totales += 1;
-				return this.nombre + " ha bebido una bebida alcoholica y su ebriedad es de " + this.ebriedad + "<br> A la bebida le quedan " + bebida.sorbos + " sorbos";
+				console.log(this.nombre + " ha bebido una bebida alcoholica y su ebriedad es de " + this.ebriedad + "<br> A la bebida le quedan " + bebida.sorbos + " sorbos");
 			} else if (((bebida.alcoholica === true) && (this.edad < 18)) && (bebida.sorbos > 0) && (this.sorbos_totales < 30)){
-				return this.nombre + " no puede beber alcohol, es menor de edad";
+				console.log(this.nombre + " no puede beber alcohol, es menor de edad");
 			} else if (bebida.sorbos <= 0){
-				return "La bebida se ha acabado";
+				console.log("La bebida se ha acabado");
 			} else if (this.sorbos_totales >= 30) {
-				return this.nombre + " ya ha bebido demasiado (más de 30 sorbos)";
+				console.log(this.nombre + " ya ha bebido demasiado (más de 30 sorbos)");
 			} else if (this.ebriedad >= 25){
-				return "¡" + this.nombre + " está borracho, ya no puede seguir bebiendo bebidas alcohólicas!";
+				console.log("¡" + this.nombre + " está borracho, ya no puede seguir bebiendo bebidas alcohólicas!");
 			}
 			return this;
 		};
