@@ -481,3 +481,49 @@ function companeros() {
 	document.getElementById("mostrar_companeros_hombres").innerHTML = "Los hombres del curso son: " + arreglo_hombres + " y sumadas sus edades dan: " + total_edad_hombres;
 	document.getElementById("mostrar_companeros_total").innerHTML = "Sumadas las edades de todos dan: " + total_edad;
 }
+
+function bebidas() {
+	function Persona (nombre, edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.ebriedad = 0;
+		this.sorbos_totales = 0;
+		
+		this.sorbo_bebida = function (bebida) {
+			if ((bebida.alcoholica === false) && (bebida.sorbos > 0) && (this.sorbos_totales < 30)){
+				bebida.sorbos -= 1;
+				this.sorbos_totales += 1;
+				return this.nombre + " de ha bebido una bebida no-alcoholica <br> A la bebida le quedan " + bebida.sorbos + " sorbos";
+			} else if ((bebida.alcoholica === true) && (this.edad >= 18) && (bebida.sorbos > 0) && (this.ebriedad < 25) && (this.sorbos_totales < 30)){
+				bebida.sorbos -= 1;
+				this.ebriedad += 1;
+				this.sorbos_totales += 1;
+				return this.nombre + " ha bebido una bebida alcoholica y su ebriedad es de " + this.ebriedad + "<br> A la bebida le quedan " + bebida.sorbos + " sorbos";
+			} else if (((bebida.alcoholica === true) && (this.edad < 18)) && (bebida.sorbos > 0) && (this.sorbos_totales < 30)){
+				return this.nombre + " no puede beber alcohol, es menor de edad";
+			} else if (bebida.sorbos <= 0){
+				return "La bebida se ha acabado";
+			} else if (this.sorbos_totales >= 30) {
+				return this.nombre + " ya ha bebido demasiado (más de 30 sorbos)";
+			} else if (this.ebriedad >= 25){
+				return "¡" + this.nombre + " está borracho, ya no puede seguir bebiendo bebidas alcohólicas!";
+			}
+			return this;
+		};
+	}
+
+	function Bebida (alcoholica) {
+		this.alcoholica = alcoholica;
+		this.sorbos = 10;
+	}
+
+	var persona1 = new Persona("Pedro", 20);
+	var persona2 = new Persona("Pepito", 12);
+	var bebida1 = new Bebida(true);
+	var bebida2 = new Bebida(false);
+	var bebida3 = new Bebida(true);
+	var bebida4 = new Bebida(true);
+
+	persona2.sorbo_bebida(bebida2).sorbo_bebida(bebida4);
+	persona1.sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida1).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida3).sorbo_bebida(bebida4).sorbo_bebida(bebida4).sorbo_bebida(bebida4).sorbo_bebida(bebida4).sorbo_bebida(bebida4).sorbo_bebida(bebida4).sorbo_bebida(bebida2).sorbo_bebida(bebida2).sorbo_bebida(bebida2).sorbo_bebida(bebida2).sorbo_bebida(bebida2).sorbo_bebida(bebida2);
+}
